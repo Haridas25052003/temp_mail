@@ -1,5 +1,10 @@
 package temp_mail.temp_mail;
 
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import com.utils.HBUtils;
+
 /**
  * Hello world!
  *
@@ -8,6 +13,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Session session=HBUtils.sf.openSession();
+        Transaction tx=session.beginTransaction();
     }
 }
