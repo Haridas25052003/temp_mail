@@ -13,5 +13,11 @@ public class Temp_Mail {
 	private int id;
 	private String email_address;
 	private boolean isActive;
+	@Override
+	public String toString() {
+		return "Temp_Mail [id=" + id + ", email_address=" + email_address + ", isActive=" + isActive + "]";
+	}
+	
+	
 
 }
