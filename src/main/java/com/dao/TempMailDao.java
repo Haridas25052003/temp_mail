@@ -39,4 +39,15 @@ public class TempMailDao {
     	tx.commit();
     	session.close();
     }
+    
+    //Delete
+    public void deleteTempMail(Temp_Mail tempMail) {
+    	Session session=HBUtils.sf.openSession();
+    	Transaction tx=session.beginTransaction();
+    	
+    	session.delete(tempMail);
+    	
+    	tx.commit();
+    	session.close();
+    }
 }
