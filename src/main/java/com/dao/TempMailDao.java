@@ -28,4 +28,15 @@ public class TempMailDao {
 		session.close();
 		return mail;
 	}
+	
+	//Update (active/deactivate)
+    public void updateTempMail(Temp_Mail tempMail) {
+    	Session session=HBUtils.sf.openSession();
+    	Transaction tx=session.beginTransaction();
+    	
+    	session.update(tempMail);
+    	
+    	tx.commit();
+    	session.close();
+    }
 }
