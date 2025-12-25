@@ -21,4 +21,11 @@ public class TempMailDao {
 		session.close();
 	}
 
+	//Read by ID
+	public Temp_Mail getTempMailById(int id) {
+		Session session=HBUtils.sf.openSession();
+		Temp_Mail mail=session.get(Temp_Mail.class, id);
+		session.close();
+		return mail;
+	}
 }
